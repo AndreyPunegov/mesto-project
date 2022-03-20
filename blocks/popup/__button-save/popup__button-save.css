@@ -21,10 +21,11 @@
     min-height: 46px;
     font-size: 14px;
     line-height: 17px;
-    margin-top: 45px;
+    margin: 45px 0 6px;
   }
 }
 
-.popup__button-save:hover, .popup__button-save:focus {
+.popup__button-save:hover,
+.popup__button-save:focus {
   opacity: 0.8;
 }
