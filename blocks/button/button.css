@@ -1,15 +1,15 @@
 .button {
-    color: #fff;
-    opacity: 1;
-    cursor: pointer;
-    transition: opacity .3s linear;
-  }
-  
-  .button:hover {
-    opacity: .6;
-  }
-  
-  .button:focus {
-    outline: none;
-    opacity: .6;
-  }
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.button:focus {
+  outline: none;
+  opacity: 0.6;
+}
