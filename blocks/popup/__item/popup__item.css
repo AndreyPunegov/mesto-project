@@ -13,7 +13,10 @@
   transition: opacity 0.3s linear;
 }
 
-.popup__item:hover,
-.popup__item:focus {
+.popup__item:hover {
   opacity: 0.6;
+}
+
+.popup__item:focus {
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
