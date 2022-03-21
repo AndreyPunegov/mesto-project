@@ -1,5 +1,4 @@
 .element__cell {
-  /* min-height: 75px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,6 +8,6 @@
 
 @media screen and (max-width: 908px) {
   .element__cell {
-    padding-top: 3px;
+    padding-top: 22px;
   }
 }
