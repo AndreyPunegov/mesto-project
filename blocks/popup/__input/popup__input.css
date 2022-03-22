@@ -1,9 +1,22 @@
 .popup__input {
-  margin: 0;
+  min-height: 36px;
+  box-sizing: border-box;
   padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  outline: none;
   border: none;
-  display: grid;
-  row-gap: 21px;
-  max-width: 358px;
-  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s linear;
+}
+
+.popup__input:hover {
+  opacity: 0.6;
+}
+
+.popup__input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
