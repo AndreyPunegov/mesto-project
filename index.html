@@ -49,10 +49,10 @@
       <p class="footer__copyright">&copy;&nbsp;2022 Андрей Пунегов</p>
     </footer>
   </div>
-  <div class="popup" id="profile">
+  <div class="popup" id="profilePopup">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__block" name="Profile-edit">
+      <form class="popup__block" name="Profile-edit" id="profileEdit">
         <fieldset class="popup__form">
           <input type="text" id="profileName" class="popup__input" name="profileName" value="Жак-Ив Кусто" placeholder="Ваше Имя"
             minlength="1" maxlength="39" required>
@@ -64,13 +64,13 @@
       <button id="profileClose" class="popup__button-close button" type="button" aria-label="закрыть"></button>
     </div>
   </div>
-  <div class="popup" id="addCards">
+  <div class="popup" id="addCardsPopup">
     <div class="popup__container">
       <h2 class="popup__title">Новове место</h2>
-      <form class="popup__block" name="Profile-edit">
+      <form class="popup__block" name="Profile-edit" id="cardsEdit">
         <fieldset class="popup__form">
           <input type="text" id="titleCards" class="popup__input" name="titleCards" value="" placeholder="Название" required>
-          <input type="url" id="urlCards" class="popup__input" name="urlCards" value="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" placeholder="Ссылка на картинку" required>
+          <input type="url" id="urlCards" class="popup__input" name="urlCards" value="" placeholder="Ссылка на картинку" required>
         </fieldset>
         <button class="popup__button-save" type="submit" aria-label="сохранить">Создать</button>
       </form>
