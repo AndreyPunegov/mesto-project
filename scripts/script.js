@@ -3,6 +3,8 @@ const cardsTemplate = document.querySelector('#element-tamp').content;
 const element = document.querySelector('.element');
 const elementImage = document.querySelector('.element__image');
 const elementCaption = document.querySelector('.element__caption');
+const PopupName = document.querySelector('.profile__name');
+const PopupDiscription = document.querySelector('.profile__discription');
 
 const profilePopup = document.querySelector('#profilePopup');
 const profileClose = document.querySelector('#profileClose');
@@ -34,32 +36,32 @@ function closePopup (popup) {
 };
 
 profileButtonEdit.addEventListener('click', function () {
+  PopupName.value = profileName.textContent;
+  PopupDiscription.value = discription.textContent;
   openPopup (profilePopup);
 });
 
-profileClose.addEventListener('click', function() {
-  closePopup (profilePopup);
-});
 
 profileButtonAdd.addEventListener('click', function () {
   openPopup (addCardsPopup);
 });
 
-cardsClose.addEventListener('click', function () {
-  closePopup (addCardsPopup);
-});
+const popups = document.querySelectorAll('.popup')
 
-imagesButtonClose.addEventListener('click', function () {
-  closePopup(imagePopup);
+popups.forEach((popup) => {
+    popup.addEventListener('click', (evt) => {
+       if (evt.target.classList.contains('popup__button-close')) {
+          closePopup(popup)
+        }
+    })
 });
-
 
 // Редактировать профиль
 
 profileEdit.addEventListener('submit', function (evt) {
   evt.preventDefault();
-  document.querySelector('.profile__name').textContent = profileName.value;
-  document.querySelector('.profile__discription').textContent =discription.value;
+  PopupName.textContent = profileName.value;
+  PopupDiscription.textContent =discription.value;
 
   closePopup(profilePopup);
 });
@@ -71,7 +73,7 @@ function addNewCards (name, link) {
   const elementCaption = newCardsBody.querySelector('.element__caption')
   const elementImage = newCardsBody.querySelector('.element__image')
 
-  elementCaption.textContent = name;
+  elementImage.alt = elementCaption.textContent = name;
   elementImage.src = link;
 
   const deleteButton = newCardsBody.querySelector('.element__button-trash');
