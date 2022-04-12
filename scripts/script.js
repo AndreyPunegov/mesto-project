@@ -7,17 +7,22 @@ const elementCaption = document.querySelector('.element__caption');
 const profilePopup = document.querySelector('#profilePopup');
 const profileClose = document.querySelector('#profileClose');
 const addCardsPopup = document.querySelector('#addCardsPopup');
+const popupImage = document.querySelector('.popup__image');
 
 const cardsClose = document.querySelector('#cardsClose');
 const elementsList = document.querySelector('.elements__list');
 
 const profileButtonEdit = document.querySelector('.profile__button-edit');
 const profileButtonAdd = document.querySelector('.profile__button-add');
+const imagesButtonClose = document.querySelector('#images_button-close');
 
 const discription = document.querySelector('#discription');
 const profileName = document.querySelector('#profileName');
 const profileEdit = document.querySelector('#profileEdit');
 const cardsEdit = document.querySelector('#cardsEdit')
+
+const popupFigcaption = document.querySelector('.popup__figurecaption')
+
 
 // Открыть закрыть popup
 
@@ -42,6 +47,10 @@ profileButtonAdd.addEventListener('click', function () {
 
 cardsClose.addEventListener('click', function () {
   closePopup (addCardsPopup);
+});
+
+imagesButtonClose.addEventListener('click', function () {
+  closePopup(imagePopup);
 });
 
 
@@ -75,6 +84,12 @@ function addNewCards (name, link) {
     elementButtonLike.addEventListener('click', function (evt) {
       evt.target.classList.toggle('element__button-like_active')
       })
+
+  newCardsBody.querySelector('.element__image').addEventListener ('click', function (evt) {
+    popupImage.src = evt.target.src;
+      popupFigcaption.textContent = popupImage.alt = evt.target.alt;
+      openPopup (imagePopup);
+      });
 
 
     return (newCardsBody);
